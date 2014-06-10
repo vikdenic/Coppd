@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9300928819468E3500D24B05 /* OnBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9300928719468E3500D24B05 /* OnBoardViewController.m */; };
+		9300928B19468E4E00D24B05 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9300928A19468E4E00D24B05 /* RegisterViewController.m */; };
+		9300928E19468E6600D24B05 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9300928D19468E6600D24B05 /* LogInViewController.m */; };
+		9300929119468E8300D24B05 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9300929019468E8300D24B05 /* FeedViewController.m */; };
+		9300929419468E9B00D24B05 /* ExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9300929319468E9B00D24B05 /* ExploreViewController.m */; };
+		9300929719468EAD00D24B05 /* ClosetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9300929619468EAD00D24B05 /* ClosetViewController.m */; };
+		9300929A19468F3400D24B05 /* FeedCustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9300929919468F3400D24B05 /* FeedCustomTableViewCell.m */; };
 		9354DB00194686DF007D542C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9354DAFF194686DF007D542C /* Foundation.framework */; };
 		9354DB02194686DF007D542C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9354DB01194686DF007D542C /* CoreGraphics.framework */; };
 		9354DB04194686DF007D542C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9354DB03194686DF007D542C /* UIKit.framework */; };
@@ -34,6 +41,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9300928619468E3500D24B05 /* OnBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnBoardViewController.h; sourceTree = "<group>"; };
+		9300928719468E3500D24B05 /* OnBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnBoardViewController.m; sourceTree = "<group>"; };
+		9300928919468E4E00D24B05 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		9300928A19468E4E00D24B05 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		9300928C19468E6600D24B05 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
+		9300928D19468E6600D24B05 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
+		9300928F19468E8300D24B05 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		9300929019468E8300D24B05 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		9300929219468E9B00D24B05 /* ExploreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExploreViewController.h; sourceTree = "<group>"; };
+		9300929319468E9B00D24B05 /* ExploreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExploreViewController.m; sourceTree = "<group>"; };
+		9300929519468EAD00D24B05 /* ClosetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClosetViewController.h; sourceTree = "<group>"; };
+		9300929619468EAD00D24B05 /* ClosetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClosetViewController.m; sourceTree = "<group>"; };
+		9300929819468F3400D24B05 /* FeedCustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedCustomTableViewCell.h; sourceTree = "<group>"; };
+		9300929919468F3400D24B05 /* FeedCustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedCustomTableViewCell.m; sourceTree = "<group>"; };
 		9354DAFC194686DF007D542C /* Coppd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coppd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9354DAFF194686DF007D542C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9354DB01194686DF007D542C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -115,6 +136,20 @@
 				9354DB0E194686DF007D542C /* AppDelegate.h */,
 				9354DB0F194686DF007D542C /* AppDelegate.m */,
 				9354DB11194686DF007D542C /* Main.storyboard */,
+				9300929819468F3400D24B05 /* FeedCustomTableViewCell.h */,
+				9300929919468F3400D24B05 /* FeedCustomTableViewCell.m */,
+				9300929519468EAD00D24B05 /* ClosetViewController.h */,
+				9300929619468EAD00D24B05 /* ClosetViewController.m */,
+				9300929219468E9B00D24B05 /* ExploreViewController.h */,
+				9300929319468E9B00D24B05 /* ExploreViewController.m */,
+				9300928F19468E8300D24B05 /* FeedViewController.h */,
+				9300929019468E8300D24B05 /* FeedViewController.m */,
+				9300928C19468E6600D24B05 /* LogInViewController.h */,
+				9300928D19468E6600D24B05 /* LogInViewController.m */,
+				9300928919468E4E00D24B05 /* RegisterViewController.h */,
+				9300928A19468E4E00D24B05 /* RegisterViewController.m */,
+				9300928619468E3500D24B05 /* OnBoardViewController.h */,
+				9300928719468E3500D24B05 /* OnBoardViewController.m */,
 				9354DB14194686DF007D542C /* ViewController.h */,
 				9354DB15194686DF007D542C /* ViewController.m */,
 				9354DB17194686DF007D542C /* Images.xcassets */,
@@ -249,8 +284,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9300929419468E9B00D24B05 /* ExploreViewController.m in Sources */,
+				9300929719468EAD00D24B05 /* ClosetViewController.m in Sources */,
+				9300928B19468E4E00D24B05 /* RegisterViewController.m in Sources */,
 				9354DB16194686DF007D542C /* ViewController.m in Sources */,
+				9300929119468E8300D24B05 /* FeedViewController.m in Sources */,
+				9300928E19468E6600D24B05 /* LogInViewController.m in Sources */,
 				9354DB10194686DF007D542C /* AppDelegate.m in Sources */,
+				9300928819468E3500D24B05 /* OnBoardViewController.m in Sources */,
+				9300929A19468F3400D24B05 /* FeedCustomTableViewCell.m in Sources */,
 				9354DB0C194686DF007D542C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,6 +498,7 @@
 				9354DB30194686DF007D542C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9354DB31194686DF007D542C /* Build configuration list for PBXNativeTarget "CoppdTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +507,7 @@
 				9354DB33194686DF007D542C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
