@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ExploreViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UISearchBar *exploreSearchBar;
+@property (weak, nonatomic) IBOutlet UICollectionView *exploreCollectionView;
 
 @end

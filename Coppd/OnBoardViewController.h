@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface OnBoardViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *onBoardRegisterButton;
+@property (weak, nonatomic) IBOutlet UIButton *onBoardLogInButton;
+@property (weak, nonatomic) IBOutlet UIImageView *onBoardImageView;
 
 @end

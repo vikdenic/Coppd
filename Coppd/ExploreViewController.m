@@ -46,4 +46,45 @@
 }
 */
 
+
+
+
+
+
+//CollectionView Delegate Methods
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 8;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ExploreCell" forIndexPath:indexPath];
+    [cell.layer setBorderWidth:2.0f];
+    [cell.layer setBorderColor:[UIColor redColor].CGColor];
+
+
+
+    //    NSArray *array = [self.flickrDictionary objectForKey:@"photos"];
+    //        self.dictionary = [resultsArray objectAtIndex:indexPath.row];
+    //        NSDictionary *groupDictionary = [self.dictionary objectForKey:@"group"];
+    //        NSDictionary *venueDictionary = [self.dictionary objectForKey:@"venue"];
+    //
+    //        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyMeetUpCell"];
+    //        cell.textLabel.text = groupDictionary[@"name"];
+    //        cell.detailTextLabel.text = venueDictionary[@"address_1"];
+    
+    return cell;
+}
+
+
+
+
+
 @end

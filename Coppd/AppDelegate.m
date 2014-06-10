@@ -7,13 +7,17 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    return YES;
+    [Parse setApplicationId:@"U2zkSmKWgKaTkUDWfAGpB2JMJyzccvf6TPGaVnZ7"
+                  clientKey:@"asnrLW4gSecYQEsWBBNGj9ah3AhsFH16Q0owCJok"];
+
+    //Anonymous user setup
+    [PFUser enableAutomaticUser];    return YES;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

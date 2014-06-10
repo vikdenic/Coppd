@@ -8,6 +8,7 @@
 
 #import "FeedViewController.h"
 #import "FeedCustomTableViewCell.h"
+#import <Parse/Parse.h>
 
 @interface FeedViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -27,13 +28,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+    testObject[@"foo"] = @"bar";
+    [testObject saveInBackground];
+
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 //Dismiss keyboard
