@@ -47,7 +47,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="S1e1_gnome_monster_arms_up.png" translatesAutoresizingMaskIntoConstraints="NO" id="x7i-mT-KBE">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x7i-mT-KBE">
                                                     <rect key="frame" x="0.0" y="52" width="320" height="320"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -113,6 +113,20 @@
                                     <outlet property="delegate" destination="2XQ-Uy-bCx" id="IdX-xZ-dU0"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRG-Zz-2ay">
+                                <rect key="frame" x="130" y="430" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="2XQ-Uy-bCx" eventType="touchUpInside" id="gFN-O6-DUg"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="action" translatesAutoresizingMaskIntoConstraints="NO" id="2kh-iB-3fa">
+                                <rect key="frame" x="130" y="430" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -203,12 +217,11 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="XwE-WT-O1J"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="Psg-9q-7yH">
+                    <tabBar key="tabBar" opaque="NO" contentMode="scaleAspectFit" barStyle="black" id="Psg-9q-7yH">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.80392163989999998" green="0.99215692280000001" blue="0.20392158630000001" alpha="1" colorSpace="deviceRGB"/>
-                        <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.12143590329999999" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="selectedImageTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="2XQ-Uy-bCx" kind="relationship" relationship="viewControllers" id="yTW-1n-1IT"/>
@@ -321,7 +334,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="S1e1_gnome_monster_arms_up.png" width="1280" height="717"/>
+        <image name="action" width="60" height="60"/>
         <image name="monster2.png" width="3333" height="1971"/>
         <image name="ncBXnMxei.png" width="1500" height="987"/>
     </resources>

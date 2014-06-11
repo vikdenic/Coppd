@@ -11,11 +11,13 @@
 #import <Parse/Parse.h>
 
 //UITableViewDelegate, UITableViewDataSource,
-@interface FeedViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface FeedViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate>
 
 @property (nonatomic,strong) PFLogInViewController *loginViewController;
 @property (nonatomic, strong) PFSignUpViewController *signUpViewController;
 @property (weak, nonatomic) IBOutlet UITableView *feedTableView;
+
+@property (nonatomic, strong) UIImagePickerController *cameraController;
 
 @end
 
@@ -44,6 +46,13 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+
+    //camera stuff
+    self.cameraController = [[UIImagePickerController alloc] init];
+    self.cameraController.delegate = self;
+    self.cameraController.allowsEditing = YES;
+
+    self.cameraController.sourceType = UIImagePickerControllerSourceTypeCamera;
 
     [self.feedTableView reloadData];
 }
@@ -76,6 +85,13 @@
 
         self.photosArray = objects;
         [self.feedTableView reloadData];
+    }];
+}
+
+- (IBAction)onButtonPressed:(UIButton *)sender
+{
+    [self presentViewController:self.cameraController animated:NO completion:^{
+        //
     }];
 }
 
