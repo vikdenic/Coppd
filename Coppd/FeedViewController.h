@@ -12,7 +12,8 @@
 
 @interface FeedViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UITableView *feedTableView;
+//@property (weak, nonatomic) IBOutlet UITableView *feedTableView;
+
 
 @property (strong, nonatomic) NSArray *photosArray;
 

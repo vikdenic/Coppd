@@ -10,21 +10,58 @@
 #import "FeedCustomTableViewCell.h"
 #import <Parse/Parse.h>
 
-@interface FeedViewController () <UITableViewDelegate, UITableViewDataSource>
+//UITableViewDelegate, UITableViewDataSource,
+@interface FeedViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
+
+@property (nonatomic,strong) PFLogInViewController *loginViewController;
+@property (nonatomic, strong) PFSignUpViewController *signUpViewController;
 
 @end
 
 @implementation FeedViewController
 
+-(void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user
+{
+    [logInController dismissViewControllerAnimated:YES completion:nil];
+    //query for data and reload tableview
+}
+
+-(void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user
+{
+    [signUpController dismissViewControllerAnimated:YES completion:nil];
+
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    [self performSelector:@selector(retrieveFromParse)];
-    self.photosArray = [[NSArray alloc]init];
+    [PFUser logOut];
+
 
 }
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    if (![PFUser currentUser]) {
+        self.loginViewController = [[PFLogInViewController alloc] init];
+        self.signUpViewController = [[PFSignUpViewController alloc] init];
 
+        self.loginViewController.delegate = self;
+        self.signUpViewController.delegate = self;
+
+        self.loginViewController.signUpController = self.signUpViewController;
+        [self presentViewController:self.loginViewController animated:NO  completion:nil];
+    }
+    else {
+        [self retrieveFromParse];
+    }
+
+}
 -(void)retrieveFromParse
 {
     PFQuery *retrievePhotos = [PFQuery queryWithClassName:@"Photo"];
@@ -33,7 +70,7 @@
 
         self.photosArray = [[NSArray alloc] initWithArray:objects];
 
-        [self.feedTableView reloadData];
+        //[self.feedTableView reloadData];
     }];
 
 }
@@ -45,17 +82,26 @@
     return self.photosArray.count;
 }
 
+
+
+
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     FeedCustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FeedCell"];
 
-    PFObject *testPhoto = [self.photosArray objectAtIndex:indexPath.row];
-    PFFile *testImage = [testPhoto objectForKey:@"image"];
+PFObject *testPhoto = [self.photosArray objectAtIndex:indexPath.row];
+PFFile *testImage = [testPhoto objectForKey:@"image"];
+
+//    if (!cell) {
+//        cell = [[FeedCustomTableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"FeedCell"];
+//    }
+
+    //cell.sneakerImageView.image = object[@"image"];
 
     [testImage getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-        UIImage *tempImage = [UIImage imageWithData:data];
+    UIImage *tempImage = [UIImage imageWithData:data];
         cell.sneakerImageView.image = tempImage;
-        [self.feedTableView reloadData];
     }];
     return cell;
 }
@@ -64,5 +110,15 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
 }
+
+
+
+- (IBAction)likeButtonPressed:(UIButton *)sender
+{
+
+    
+}
+
+
 
 @end

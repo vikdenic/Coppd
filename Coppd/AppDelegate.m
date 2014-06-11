@@ -16,8 +16,6 @@
     [Parse setApplicationId:@"0UedeiKBbGbNeTdD4gBPPorNpremX1vIVPbkWD78"
                   clientKey:@"GuEWmzjcybZLDKbuPd7FxM2v0CuQjkyR2Q7JUczw"];
 
-    //Anonymous user setup
-    [PFUser enableAutomaticUser];
     return YES;
 }
 							

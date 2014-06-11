@@ -24,9 +24,8 @@
 		8147F230194780FA00C98461 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8147F225194780FA00C98461 /* Social.framework */; };
 		8147F231194780FA00C98461 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8147F226194780FA00C98461 /* StoreKit.framework */; };
 		8147F232194780FA00C98461 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8147F227194780FA00C98461 /* SystemConfiguration.framework */; };
-		9300928819468E3500D24B05 /* OnBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9300928719468E3500D24B05 /* OnBoardViewController.m */; };
-		9300928B19468E4E00D24B05 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9300928A19468E4E00D24B05 /* RegisterViewController.m */; };
-		9300928E19468E6600D24B05 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9300928D19468E6600D24B05 /* LogInViewController.m */; };
+		8150E16219489F2900AD192E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8150E16119489F2900AD192E /* Parse.framework */; };
+		8150E1681948B27900AD192E /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8150E1671948B27900AD192E /* Photo.m */; };
 		9300929119468E8300D24B05 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9300929019468E8300D24B05 /* FeedViewController.m */; };
 		9300929419468E9B00D24B05 /* ExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9300929319468E9B00D24B05 /* ExploreViewController.m */; };
 		9300929719468EAD00D24B05 /* ClosetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9300929619468EAD00D24B05 /* ClosetViewController.m */; };
@@ -39,7 +38,6 @@
 		9354DB0C194686DF007D542C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9354DB0B194686DF007D542C /* main.m */; };
 		9354DB10194686DF007D542C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9354DB0F194686DF007D542C /* AppDelegate.m */; };
 		9354DB13194686DF007D542C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9354DB11194686DF007D542C /* Main.storyboard */; };
-		9354DB16194686DF007D542C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9354DB15194686DF007D542C /* ViewController.m */; };
 		9354DB18194686DF007D542C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9354DB17194686DF007D542C /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -61,12 +59,9 @@
 		8147F225194780FA00C98461 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		8147F226194780FA00C98461 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8147F227194780FA00C98461 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		9300928619468E3500D24B05 /* OnBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnBoardViewController.h; sourceTree = "<group>"; };
-		9300928719468E3500D24B05 /* OnBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnBoardViewController.m; sourceTree = "<group>"; };
-		9300928919468E4E00D24B05 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
-		9300928A19468E4E00D24B05 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
-		9300928C19468E6600D24B05 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
-		9300928D19468E6600D24B05 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
+		8150E16119489F2900AD192E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		8150E1661948B27900AD192E /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		8150E1671948B27900AD192E /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		9300928F19468E8300D24B05 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
 		9300929019468E8300D24B05 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
 		9300929219468E9B00D24B05 /* ExploreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExploreViewController.h; sourceTree = "<group>"; };
@@ -87,8 +82,6 @@
 		9354DB0E194686DF007D542C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9354DB0F194686DF007D542C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9354DB12194686DF007D542C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9354DB14194686DF007D542C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9354DB15194686DF007D542C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9354DB17194686DF007D542C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9354DB1E194686DF007D542C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		9354DB26194686DF007D542C /* CoppdTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoppdTests-Info.plist"; sourceTree = "<group>"; };
@@ -107,6 +100,7 @@
 				8147F22B194780FA00C98461 /* CoreLocation.framework in Frameworks */,
 				8147F22C194780FA00C98461 /* libz.dylib in Frameworks */,
 				8147F22D194780FA00C98461 /* MobileCoreServices.framework in Frameworks */,
+				8150E16219489F2900AD192E /* Parse.framework in Frameworks */,
 				9324AEB419479A1F001520FA /* Parse.framework in Frameworks */,
 				8147F22E194780FA00C98461 /* QuartzCore.framework in Frameworks */,
 				8147F22F194780FA00C98461 /* Security.framework in Frameworks */,
@@ -125,6 +119,8 @@
 		9354DAF3194686DF007D542C = {
 			isa = PBXGroup;
 			children = (
+				8150E1661948B27900AD192E /* Photo.h */,
+				8150E1671948B27900AD192E /* Photo.m */,
 				9354DB05194686DF007D542C /* Coppd */,
 				9354DB24194686DF007D542C /* CoppdTests */,
 				9354DAFE194686DF007D542C /* Frameworks */,
@@ -149,6 +145,7 @@
 		9354DAFE194686DF007D542C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8150E16119489F2900AD192E /* Parse.framework */,
 				9324AEB319479A1F001520FA /* Parse.framework */,
 				8147F21D194780FA00C98461 /* Accounts.framework */,
 				8147F21E194780FA00C98461 /* AudioToolbox.framework */,
@@ -183,14 +180,6 @@
 				9300929319468E9B00D24B05 /* ExploreViewController.m */,
 				9300928F19468E8300D24B05 /* FeedViewController.h */,
 				9300929019468E8300D24B05 /* FeedViewController.m */,
-				9300928C19468E6600D24B05 /* LogInViewController.h */,
-				9300928D19468E6600D24B05 /* LogInViewController.m */,
-				9300928919468E4E00D24B05 /* RegisterViewController.h */,
-				9300928A19468E4E00D24B05 /* RegisterViewController.m */,
-				9300928619468E3500D24B05 /* OnBoardViewController.h */,
-				9300928719468E3500D24B05 /* OnBoardViewController.m */,
-				9354DB14194686DF007D542C /* ViewController.h */,
-				9354DB15194686DF007D542C /* ViewController.m */,
 				9354DB17194686DF007D542C /* Images.xcassets */,
 				9354DB06194686DF007D542C /* Supporting Files */,
 			);
@@ -297,14 +286,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8150E1681948B27900AD192E /* Photo.m in Sources */,
 				9300929419468E9B00D24B05 /* ExploreViewController.m in Sources */,
 				9300929719468EAD00D24B05 /* ClosetViewController.m in Sources */,
-				9300928B19468E4E00D24B05 /* RegisterViewController.m in Sources */,
-				9354DB16194686DF007D542C /* ViewController.m in Sources */,
 				9300929119468E8300D24B05 /* FeedViewController.m in Sources */,
-				9300928E19468E6600D24B05 /* LogInViewController.m in Sources */,
 				9354DB10194686DF007D542C /* AppDelegate.m in Sources */,
-				9300928819468E3500D24B05 /* OnBoardViewController.m in Sources */,
 				9300929A19468F3400D24B05 /* FeedCustomTableViewCell.m in Sources */,
 				9354DB0C194686DF007D542C /* main.m in Sources */,
 			);
