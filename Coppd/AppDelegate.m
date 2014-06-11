@@ -13,11 +13,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [Parse setApplicationId:@"U2zkSmKWgKaTkUDWfAGpB2JMJyzccvf6TPGaVnZ7"
-                  clientKey:@"asnrLW4gSecYQEsWBBNGj9ah3AhsFH16Q0owCJok"];
+    [Parse setApplicationId:@"0UedeiKBbGbNeTdD4gBPPorNpremX1vIVPbkWD78"
+                  clientKey:@"GuEWmzjcybZLDKbuPd7FxM2v0CuQjkyR2Q7JUczw"];
 
     //Anonymous user setup
-    [PFUser enableAutomaticUser];    return YES;
+    [PFUser enableAutomaticUser];
+    return YES;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

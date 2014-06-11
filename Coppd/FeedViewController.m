@@ -16,52 +16,53 @@
 
 @implementation FeedViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-    testObject[@"foo"] = @"bar";
-    [testObject saveInBackground];
+    [self performSelector:@selector(retrieveFromParse)];
+    self.photosArray = [[NSArray alloc]init];
 
 }
 
-- (void)didReceiveMemoryWarning
+-(void)retrieveFromParse
 {
-    [super didReceiveMemoryWarning];
-}
+    PFQuery *retrievePhotos = [PFQuery queryWithClassName:@"Photo"];
 
-//Dismiss keyboard
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    [self.view endEditing:YES];
+    [retrievePhotos findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+
+        self.photosArray = [[NSArray alloc] initWithArray:objects];
+
+        [self.feedTableView reloadData];
+    }];
+
 }
 
 #pragma mark - Delegates
 
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return self.photosArray.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     FeedCustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FeedCell"];
 
+    PFObject *testPhoto = [self.photosArray objectAtIndex:indexPath.row];
+    PFFile *testImage = [testPhoto objectForKey:@"image"];
+
+    [testImage getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        UIImage *tempImage = [UIImage imageWithData:data];
+        cell.sneakerImageView.image = tempImage;
+        [self.feedTableView reloadData];
+    }];
     return cell;
 }
 
-
-
-
-
+//Dismiss keyboard
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
+}
 
 @end

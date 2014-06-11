@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FeedCustomTableViewCell.h"
+#import <Parse/Parse.h>
 
 @interface FeedViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UITableView *feedTableView;
+
+@property (strong, nonatomic) NSArray *photosArray;
 
 @end

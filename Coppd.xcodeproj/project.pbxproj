@@ -24,7 +24,6 @@
 		8147F230194780FA00C98461 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8147F225194780FA00C98461 /* Social.framework */; };
 		8147F231194780FA00C98461 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8147F226194780FA00C98461 /* StoreKit.framework */; };
 		8147F232194780FA00C98461 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8147F227194780FA00C98461 /* SystemConfiguration.framework */; };
-		8147F2341947810C00C98461 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8147F2331947810C00C98461 /* Parse.framework */; };
 		9300928819468E3500D24B05 /* OnBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9300928719468E3500D24B05 /* OnBoardViewController.m */; };
 		9300928B19468E4E00D24B05 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9300928A19468E4E00D24B05 /* RegisterViewController.m */; };
 		9300928E19468E6600D24B05 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9300928D19468E6600D24B05 /* LogInViewController.m */; };
@@ -32,6 +31,7 @@
 		9300929419468E9B00D24B05 /* ExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9300929319468E9B00D24B05 /* ExploreViewController.m */; };
 		9300929719468EAD00D24B05 /* ClosetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9300929619468EAD00D24B05 /* ClosetViewController.m */; };
 		9300929A19468F3400D24B05 /* FeedCustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9300929919468F3400D24B05 /* FeedCustomTableViewCell.m */; };
+		9324AEB419479A1F001520FA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9324AEB319479A1F001520FA /* Parse.framework */; };
 		9354DB00194686DF007D542C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9354DAFF194686DF007D542C /* Foundation.framework */; };
 		9354DB02194686DF007D542C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9354DB01194686DF007D542C /* CoreGraphics.framework */; };
 		9354DB04194686DF007D542C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9354DB03194686DF007D542C /* UIKit.framework */; };
@@ -61,7 +61,6 @@
 		8147F225194780FA00C98461 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		8147F226194780FA00C98461 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8147F227194780FA00C98461 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		8147F2331947810C00C98461 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		9300928619468E3500D24B05 /* OnBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnBoardViewController.h; sourceTree = "<group>"; };
 		9300928719468E3500D24B05 /* OnBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnBoardViewController.m; sourceTree = "<group>"; };
 		9300928919468E4E00D24B05 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
@@ -76,6 +75,7 @@
 		9300929619468EAD00D24B05 /* ClosetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClosetViewController.m; sourceTree = "<group>"; };
 		9300929819468F3400D24B05 /* FeedCustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedCustomTableViewCell.h; sourceTree = "<group>"; };
 		9300929919468F3400D24B05 /* FeedCustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedCustomTableViewCell.m; sourceTree = "<group>"; };
+		9324AEB319479A1F001520FA /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../Parse.framework; sourceTree = "<group>"; };
 		9354DAFC194686DF007D542C /* Coppd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coppd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9354DAFF194686DF007D542C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9354DB01194686DF007D542C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -107,7 +107,7 @@
 				8147F22B194780FA00C98461 /* CoreLocation.framework in Frameworks */,
 				8147F22C194780FA00C98461 /* libz.dylib in Frameworks */,
 				8147F22D194780FA00C98461 /* MobileCoreServices.framework in Frameworks */,
-				8147F2341947810C00C98461 /* Parse.framework in Frameworks */,
+				9324AEB419479A1F001520FA /* Parse.framework in Frameworks */,
 				8147F22E194780FA00C98461 /* QuartzCore.framework in Frameworks */,
 				8147F22F194780FA00C98461 /* Security.framework in Frameworks */,
 				8147F230194780FA00C98461 /* Social.framework in Frameworks */,
@@ -149,7 +149,7 @@
 		9354DAFE194686DF007D542C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8147F2331947810C00C98461 /* Parse.framework */,
+				9324AEB319479A1F001520FA /* Parse.framework */,
 				8147F21D194780FA00C98461 /* Accounts.framework */,
 				8147F21E194780FA00C98461 /* AudioToolbox.framework */,
 				8147F21F194780FA00C98461 /* CFNetwork.framework */,
@@ -419,6 +419,7 @@
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(PROJECT_DIR)",
+					/Users/viktordenic/Desktop,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Coppd/Coppd-Prefix.pch";
@@ -437,6 +438,7 @@
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(PROJECT_DIR)",
+					/Users/viktordenic/Desktop,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Coppd/Coppd-Prefix.pch";
