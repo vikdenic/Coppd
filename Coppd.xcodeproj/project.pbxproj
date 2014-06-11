@@ -39,6 +39,7 @@
 		9354DB10194686DF007D542C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9354DB0F194686DF007D542C /* AppDelegate.m */; };
 		9354DB13194686DF007D542C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9354DB11194686DF007D542C /* Main.storyboard */; };
 		9354DB18194686DF007D542C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9354DB17194686DF007D542C /* Images.xcassets */; };
+		939EF7E61948F51E00025E92 /* EditPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 939EF7E51948F51E00025E92 /* EditPhotoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +88,8 @@
 		9354DB26194686DF007D542C /* CoppdTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoppdTests-Info.plist"; sourceTree = "<group>"; };
 		9354DB28194686DF007D542C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9354DB2A194686DF007D542C /* CoppdTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoppdTests.m; sourceTree = "<group>"; };
+		939EF7E41948F51E00025E92 /* EditPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPhotoViewController.h; sourceTree = "<group>"; };
+		939EF7E51948F51E00025E92 /* EditPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPhotoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +175,8 @@
 				9354DB0E194686DF007D542C /* AppDelegate.h */,
 				9354DB0F194686DF007D542C /* AppDelegate.m */,
 				9354DB11194686DF007D542C /* Main.storyboard */,
+				939EF7E41948F51E00025E92 /* EditPhotoViewController.h */,
+				939EF7E51948F51E00025E92 /* EditPhotoViewController.m */,
 				9300929819468F3400D24B05 /* FeedCustomTableViewCell.h */,
 				9300929919468F3400D24B05 /* FeedCustomTableViewCell.m */,
 				9300929519468EAD00D24B05 /* ClosetViewController.h */,
@@ -289,6 +294,7 @@
 				8150E1681948B27900AD192E /* Photo.m in Sources */,
 				9300929419468E9B00D24B05 /* ExploreViewController.m in Sources */,
 				9300929719468EAD00D24B05 /* ClosetViewController.m in Sources */,
+				939EF7E61948F51E00025E92 /* EditPhotoViewController.m in Sources */,
 				9300929119468E8300D24B05 /* FeedViewController.m in Sources */,
 				9354DB10194686DF007D542C /* AppDelegate.m in Sources */,
 				9300929A19468F3400D24B05 /* FeedCustomTableViewCell.m in Sources */,

@@ -9,6 +9,7 @@
 #import "FeedViewController.h"
 #import "FeedCustomTableViewCell.h"
 #import <Parse/Parse.h>
+#import "EditPhotoViewController.h"
 
 //UITableViewDelegate, UITableViewDataSource,
 @interface FeedViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate>
@@ -18,6 +19,9 @@
 @property (weak, nonatomic) IBOutlet UITableView *feedTableView;
 
 @property (nonatomic, strong) UIImagePickerController *cameraController;
+
+@property (strong, nonatomic) UIImage *imageTaken;
+@property (strong, nonatomic) NSDate *date;
 
 @end
 
@@ -88,10 +92,28 @@
     }];
 }
 
+#pragma mark - Take Picture
+
 - (IBAction)onButtonPressed:(UIButton *)sender
 {
     [self presentViewController:self.cameraController animated:NO completion:^{
         //
+    }];
+}
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    [picker dismissViewControllerAnimated:NO completion:^{
+        // Segues to SaveViewController after user picks photo
+        self.imageTaken = [info valueForKey:UIImagePickerControllerOriginalImage];
+
+        // Extracts and stores creation date of image as NSDate reference
+        NSDictionary *metaData = [info objectForKey:@"UIImagePickerControllerMediaMetadata"];
+        self.date = [[NSDate alloc]init];
+        self.date = [[metaData objectForKey:@"{Exif}"] objectForKey:@"DateTimeOriginal"];
+//        NSLog(@"DATE IS %@", self.date);
+
+        [self performSegueWithIdentifier:@"EditSegue" sender:self];
     }];
 }
 
@@ -117,6 +139,40 @@
     return cell;
 }
 
+#pragma mark - Segues and Unwinds
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqual: @"EditSegue"])
+    {
+        EditPhotoViewController *editPhotoViewController = segue.destinationViewController;
+
+        editPhotoViewController.imageTaken = self.imageTaken;
+        editPhotoViewController.date = self.date;
+    }
+}
+
+- (IBAction)unwindSegueAfterPhotoSubmit:(UIStoryboardSegue *)sender
+{
+    //take image >data >pffile >parse
+    NSData *imageData = UIImagePNGRepresentation(self.imageTaken);
+//    NSString *fileName = [NSString stringWithFormat
+    PFFile *imageFile = [PFFile fileWithData:imageData];
+    PFObject *photo = [PFObject objectWithClassName:@"Photo"];
+    [photo setObject:imageFile forKey:@"image"];
+
+}
+
+
+- (IBAction)unwindSegueToMasterViewControllerOnCancel:(UIStoryboardSegue *)sender
+{
+
+}
+
+
+
+
+#pragma mark - random stuff
 //Dismiss keyboard
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];

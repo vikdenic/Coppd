@@ -10,4 +10,11 @@
 
 @implementation Photo
 
+@dynamic photo;
+
++ (id)parseClassName
+{
+    return @"Photo";
+}
+
 @end
