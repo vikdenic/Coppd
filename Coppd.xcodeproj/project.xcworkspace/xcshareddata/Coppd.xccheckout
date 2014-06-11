@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>5DA0CE29-95A4-4500-BAE4-45E6E4F611B8</string>
+	<string>29FD18B4-0C01-4C69-8294-0097419AB385</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Coppd</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>A55921F5-6CB7-4DE8-A091-8652DF699DD3</key>
-		<string>https://github.com/vikdenic/Coppd</string>
+		<key>A2425C06-7BA2-4165-AF64-019198C523E4</key>
+		<string>https://github.com/vikdenic/Coppd.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Coppd.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>A55921F5-6CB7-4DE8-A091-8652DF699DD3</key>
+		<key>A2425C06-7BA2-4165-AF64-019198C523E4</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/vikdenic/Coppd</string>
+	<string>https://github.com/vikdenic/Coppd.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>A55921F5-6CB7-4DE8-A091-8652DF699DD3</string>
+	<string>A2425C06-7BA2-4165-AF64-019198C523E4</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>A55921F5-6CB7-4DE8-A091-8652DF699DD3</string>
+			<string>A2425C06-7BA2-4165-AF64-019198C523E4</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Coppd</string>
 		</dict>
