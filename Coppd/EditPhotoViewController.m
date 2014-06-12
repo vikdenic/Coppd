@@ -9,16 +9,20 @@
 #import "EditPhotoViewController.h"
 #import <Parse/Parse.h>
 #import "Photo.h"
+#import "FeedViewController.h"
 
 @interface EditPhotoViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIButton *submitButton;
 
 @end
 
 @implementation EditPhotoViewController
+
+
 
 - (void)viewDidLoad
 {
@@ -43,19 +47,19 @@
     [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error)
      {
          if (!error) {
-
              // Create a PFObject around a PFFile and associate it with the current user
              Photo *uploadedImage = [Photo objectWithClassName:@"Photo"];
              [uploadedImage setObject:imageFile forKey:@"image"];
 
 //             [userPhoto setObject:[PFUser currentUser] forKey:@"user"];
 //             userPhoto[@"caption"] = self.textView.text;
-
+             
+//             [[NSNotificationCenter defaultCenter] postNotificationName:@"Test1" object:self];
              [uploadedImage saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error)
               {
                   if (!error) {
-
                       [self dismissViewControllerAnimated:YES completion:nil];
+                      [[NSNotificationCenter defaultCenter] postNotificationName:@"Test1" object:self];
                   }
                   else{
                       NSLog(@"Error: %@ %@", error, [error userInfo]);
@@ -63,9 +67,6 @@
               }];
          }
      }];
-
-    
 }
-
 
 @end

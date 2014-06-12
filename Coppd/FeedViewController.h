@@ -17,4 +17,6 @@
 
 @property (strong, nonatomic) NSArray *photosArray;
 
+@property (weak, nonatomic) IBOutlet UITableView *feedTableView;
+
 @end

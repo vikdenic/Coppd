@@ -14,4 +14,6 @@
 
 @property (nonatomic, strong) NSDate *date;
 
+-(IBAction)one:(id) sender;
+
 @end

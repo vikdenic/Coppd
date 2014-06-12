@@ -16,7 +16,6 @@
 
 @property (nonatomic,strong) PFLogInViewController *loginViewController;
 @property (nonatomic, strong) PFSignUpViewController *signUpViewController;
-@property (weak, nonatomic) IBOutlet UITableView *feedTableView;
 
 @property (nonatomic, strong) UIImagePickerController *cameraController;
 
@@ -26,6 +25,24 @@
 @end
 
 @implementation FeedViewController
+
+- (id)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+
+    if (self) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"Test1" object:nil];
+    }
+    return self;
+}
+
+-(void) receiveNotification:(NSNotification *) notification
+{
+    if ([[notification name] isEqualToString:@"Test1"])
+    {
+        [self retrieveFromParse];
+    }
+}
 
 -(void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user
 {
@@ -84,7 +101,7 @@
 -(void)retrieveFromParse
 {
     PFQuery *retrievePhotos = [PFQuery queryWithClassName:@"Photo"];
-
+    [retrievePhotos includeKey:@"user"];
     [retrievePhotos findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
 
         self.photosArray = objects;
@@ -134,13 +151,18 @@
 {
     FeedCustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FeedCell"];
 
-    PFObject *testPhoto = [self.photosArray objectAtIndex:indexPath.row];
-    PFFile *testImage = [testPhoto objectForKey:@"image"];
+    PFObject *photo = [self.photosArray objectAtIndex:indexPath.row];
+    NSLog(@"PHOTO IS %@",[photo objectForKey:@"user"]);
+
+    PFFile *testImage = [photo objectForKey:@"image"];
 
     [testImage getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
         UIImage *tempImage = [UIImage imageWithData:data];
-            cell.sneakerImageView.image = tempImage;
+        cell.sneakerImageView.image = tempImage;
     }];
+
+//    cell.usernameButton.titleLabel.text = user.username;
+//    cell.usernameButton.titleLabel.text = [PFUser currentUser].username;
 
     return cell;
 }
@@ -175,18 +197,13 @@
 }
 
 
-
-
 #pragma mark - random stuff
 //Dismiss keyboard
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
     [self.view endEditing:YES];
 }
 
-//- (IBAction)likeButtonPressed:(UIButton *)sender
-//{
-//
-//    
-//}
 
 @end

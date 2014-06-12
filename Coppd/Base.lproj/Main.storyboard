@@ -133,7 +133,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Feed" id="uhu-ZV-kxG"/>
                     <connections>
-                        <outlet property="feedTableView" destination="2en-dQ-xIQ" id="our-pq-JlU"/>
+                        <outlet property="feedTableView" destination="2en-dQ-xIQ" id="31D-3B-191"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BxX-br-qNg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -387,6 +387,7 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="Gtr-q8-d8y" id="2Sx-nK-cBW"/>
+                        <outlet property="submitButton" destination="B8P-jZ-Hif" id="2Ia-g1-BTH"/>
                         <outlet property="textView" destination="igv-6k-8dp" id="2fj-Hw-gHB"/>
                     </connections>
                 </viewController>
