@@ -105,7 +105,13 @@
 {
     [picker dismissViewControllerAnimated:NO completion:^{
         // Segues to SaveViewController after user picks photo
-        self.imageTaken = [info valueForKey:UIImagePickerControllerOriginalImage];
+        UIImage *takenImage = [info valueForKey:UIImagePickerControllerOriginalImage];
+
+        //parse tutorial on compression
+        UIGraphicsBeginImageContext(CGSizeMake(640, 960));
+        [takenImage drawInRect: CGRectMake(0, 0, 640, 960)];
+        self.imageTaken = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
 
         // Extracts and stores creation date of image as NSDate reference
         NSDictionary *metaData = [info objectForKey:@"UIImagePickerControllerMediaMetadata"];
@@ -160,7 +166,6 @@
     PFFile *imageFile = [PFFile fileWithData:imageData];
     PFObject *photo = [PFObject objectWithClassName:@"Photo"];
     [photo setObject:imageFile forKey:@"image"];
-
 }
 
 

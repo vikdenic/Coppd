@@ -36,7 +36,6 @@
     UIImage * resizedImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
 
-
     NSData *imageData = UIImagePNGRepresentation(resizedImage);
     PFFile *imageFile = [PFFile fileWithData:imageData];
 
@@ -65,6 +64,7 @@
          }
      }];
 
+    
 }
 
 
