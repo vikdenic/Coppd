@@ -101,7 +101,7 @@
 -(void)retrieveFromParse
 {
     PFQuery *retrievePhotos = [PFQuery queryWithClassName:@"Photo"];
-    [retrievePhotos includeKey:@"user"];
+    [retrievePhotos includeKey:@"User"];
     [retrievePhotos findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
 
         self.photosArray = objects;
@@ -152,7 +152,8 @@
     FeedCustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FeedCell"];
 
     PFObject *photo = [self.photosArray objectAtIndex:indexPath.row];
-    NSLog(@"PHOTO IS %@",[photo objectForKey:@"user"]);
+    PFUser *testUser = [photo objectForKey:@"user"];
+    NSLog(@"%@",testUser);
 
     PFFile *testImage = [photo objectForKey:@"image"];
 
